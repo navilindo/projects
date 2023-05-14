@@ -1,0 +1,17 @@
+<h4>User information</h4>
+
+<table>
+	<?php 
+	include('../models/user.php');
+	
+	view(1);
+	?>
+
+    <tr>
+        <td>Name :</td><td> <?php //echo  ?> </td> 
+    </tr>
+    <tr>
+        <td>Email :</td><td> <?php //echo $us[1]; ?> </td> 
+    </tr>
+
+</table>

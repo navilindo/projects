@@ -1,0 +1,24 @@
+<?php
+
+function view($id){
+    include('../src/dbconnection.php');
+    
+    $query = "SELECT * from alt.users where id = $id";
+    //echo '1 + 2';
+    
+    $result = $dbcon->query($query);
+    //echo '3 + 4';
+    
+    if($result->num_rows > 0){
+        echo 'db query was successful <br>';
+        $user = mysqli_fetch_all($result);
+        
+        foreach($user as $u){
+					echo $u[2] ;        
+        }
+        
+    }
+    else echo 'db query not successful';
+}
+
+?>
